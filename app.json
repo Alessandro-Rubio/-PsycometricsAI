@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "psycometrics-ai",
+    "slug": "psycometrics-ai",
+    "owner": "psycometricsai",
+    "scheme": "psycometricsai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.psycometricsai.psycometricsai"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.psycometricsai.psycometricsai",
+      "permissions": [],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "psycometricsai",
+              "host": "oauth2redirect",
+              "pathPrefix": "/google"
+            },
+            {
+              "scheme": "psycometricsai",
+              "host": "oauth2redirect",
+              "pathPrefix": "/microsoft"
+            },
+            {
+              "scheme": "psycometricsai",
+              "host": "oauth2redirect",
+              "pathPrefix": "/linkedin"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-web-browser",
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.578024751158-gllgl91d33k9jnn7fkus9f2vscp73j41"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "3c61db67-1f25-411d-ae52-5afa66e6ebfa"
+      }
+    }
+  }
+}
